@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Chat App</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <style>
+      body{
+          padding:0;
+          margin: 0;
+      }
+      .container{
+          position: relative;
+          margin: 100px auto;
+          border:1px solid black;
+          width: 45%;
+          height:60vh;
+          overflow-y: scroll;
+      }
+      #send-container{
+        position: relative;
+        width: 45%;
+        height: 2rem;
+        margin: auto;
+        bottom:5.5rem;
+      }
+      .messageinput{
+          width:75%;
+          height: 30px;
+      }
+      #send{
+          width:20%;
+          height: 30px;
+      }
+      .left{
+          height:2rem;
+          border: 1px solid black;
+          float: left;
+          width: 60%;
+          margin:10px;
+          overflow-y: auto;
+      }
+    .right{
+          height:2rem;
+          border: 1px solid black;
+          float: right;
+          width: 60%;
+          margin:10px;
+          overflow-y: auto;
+          
+      }
+      .text{
+        font-size: 15px;
+	font-weight: bold;
+	color: var(--dark-color-b);
+	opacity: 0.7;
+	margin-bottom: 7px;
+}
+      }
+    </style>
+    <body>
+        <div class="container">
+            <!-- <div class="left"></div>
+            <div class="right"></div> -->
+            
+        </div>
+        <form id="send-container">
+            <input type="text" class="messageinput" required>
+            <button type="submit" id="send">Send</button>
+        </form>
+        <script defer src="/socket.io/socket.io.js"></script>
+        <script  src="js/script.js" ></script>
+    </body>
+</html>
